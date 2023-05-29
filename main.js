@@ -2,6 +2,7 @@
 const textArea = document.getElementById("code-input");
 const browserView = document.getElementById("browser-view");
 const refreshButton = document.getElementById("refresh-button");
+const consoleView = document.getElementById('console-view');
 
 // Обработчик событий - клик по кнопке "обновить"
 refreshButton.addEventListener("click", function() {
@@ -14,7 +15,12 @@ refreshButton.addEventListener("click", function() {
   // Отображаем HTML в browserView
   browserView.innerHTML = htmlCode;
 });
-
+    // Обновление консоли
+    consoleView.innerHTML = '';
+    for (let i = 0; i < console.log.history.length; i++) {
+        consoleView.innerHTML += '<div>' + console.log.history[i] + '</div>';
+    }
+  }
 // Функция преобразования текста в HTML-код
 function convertToHtml(text) {
   var html = "";
