@@ -46,3 +46,16 @@
     border: none;
     margin-top: 10px;
   }
+.console-container {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+
+    margin-top: 10px;
+
+  }
